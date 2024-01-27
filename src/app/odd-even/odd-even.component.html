@@ -1,0 +1,11 @@
+<div class="container mt-5 w-25">
+    <form>
+        <h2 class="text-center">{{Title}}</h2>
+        <div class="form-control">
+            <label for="Number">Szám:</label>
+            <input type="number" class="form-control" [(ngModel)]="Number" name="Number" id="Number">
+            <!-- (kétirányú adatkötés) -->
+            <p class="text-center {{ResultClass}}">{{getIsOddResultText()}}</p>
+        </div>
+    </form>
+</div>

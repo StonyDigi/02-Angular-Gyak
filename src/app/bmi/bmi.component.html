@@ -1,0 +1,15 @@
+<!-- 2. Típusú feladat: (Event binding) amikor csak a gombnyomás hatására változik az érték, nem dinamikusan -->
+<div class="container mt-5 w-25">
+    <form>
+        <h2 class="text-center">{{Title}}</h2>
+        <div class="form-control">
+            <label for="Height">Magasság (cm)</label>
+            <input type="number" class="form-control" [(ngModel)]="Height" name="Height" id="Height">
+            <label for="Weight">Súly (kg)</label>
+            <input type="number" class="form-control" [(ngModel)]="Weight" name="Weight" id="Weight">
+            <div class="text-center">
+                <button class="btn btn-success m-2" (click)="showBmiAlert()">Számol</button>
+            </div>
+        </div>
+    </form>
+</div>

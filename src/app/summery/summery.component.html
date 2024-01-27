@@ -1,0 +1,35 @@
+<div class="container mt-5">
+
+    <p>Databinding (adatkötés): minta aoldal</p>
+    <h2>Interpolation (egyszerű értékátadás)</h2>
+    <p>Az oldal készítője: {{Keszito}}</p>
+    <!-- Hiba, mert private változó -->
+    <!-- <p>Az oldal készítője: {{keszito}} -->
+    <hr>
+    <a href="{{getAngularURL()}}" target="_blank">Angular honlap - Interpolation</a>
+
+    <h2>Property binding (tulajdonság kötés)</h2>
+    <hr>
+    <!-- [Property]="value" tulajdonság-érték, tulajdonság kötés -->
+    <a [href]="getAngularURL()" target_blank>Angular honlap - Property binding</a>
+
+    <h2>Event binding - esemény kötés</h2>
+    <!-- Bizonyos esemény bekövetkezésekor meghívok egy fv-t vagy eljárást -->
+    <div>
+        <button class="btn btn-primary m-2" (click)="uzenetKuld()">Event Binding - üzenet küldés</button>
+        <button class="btn btn-primary m-2" (click)="keszitoModosit()">Event Binding - készítő módosít</button>
+    </div>
+    <hr>
+
+    <h2>Two Way Data Binding - Két irányú adatkötés</h2>
+    <form>
+        <div class="form-control">
+            <label for="aOldal">A oldal:</label>
+            <input type="number" [(ngModel)]="AOldal" class="form-control" name="aOldal" id="aOldal">
+        </div>
+    </form>
+    <p>A négyzet a oldalának mérete {{AOldal}}</p>
+    <p>A négyzet kerülete:(nem javasolt, html oldalon nem kalkulálunk) {{AOldal*4}}</p>
+    <p>A négyzet területe (javasolt): {{getTerulet()}}</p>
+
+</div>

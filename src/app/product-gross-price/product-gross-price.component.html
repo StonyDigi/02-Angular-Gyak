@@ -1,0 +1,16 @@
+<!-- (Event binding) - eseménykötéssel, kattintásra írja ki -->
+<div class="container mt-5 w-25">
+    <form>
+        <h2 class="text-center">{{Title}}</h2>
+        <div class="form-control">
+            <label for="NetPrice">Nettó ár (Ft):</label>
+            <input type="number" class="form-control" [(ngModel)]="NetPrice" name="NetPrice" id="NetPrice">
+            <label for="Vat">ÁFA</label>
+            <input type="number" class="form-control" [(ngModel)]="Vat" name="Vat" id="Vat">
+            <div class="text-center">
+                <button class="btn btn-success m-2" (click)="showAlertGrossPrice()">Számítás</button>
+            </div>
+        </div>
+    </form>
+
+</div>

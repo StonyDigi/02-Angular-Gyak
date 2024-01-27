@@ -1,0 +1,18 @@
+<!-- 1.típusú feladat megvalósítása: Kétirányú (adatkötés) - Two way data binding és interpoláció (egyszerű értékadás) -->
+<!-- hatása: amikor egy értéket megváltoztatsz akkor a számítás értéke is megváltozik -->
+<div class="container mt-5 w-25">
+    <form>
+        <div class="form-control">
+            <label for="A">A oldal:</label>
+            <input type="number" class="form-control" [(ngModel)]="A" name="A" id="A">
+            <label for="B">B oldal:</label>
+            <input type="number" class="form-control" [(ngModel)]="B" name="B" id="B">
+        </div>
+    </form>
+    <!-- {{valtozo}} ineterpolációval megjelenít egy értéket -->
+    <div class="alert alert-success mt-5" role="alert">
+        <p>A téglalap kerülete: {{getPerimeter()}} </p>
+        <p>A téglalap terület: {{getArea()}} </p>
+        <p>A téglalap terület (másként): {{A*B}} </p>
+    </div>
+</div>
