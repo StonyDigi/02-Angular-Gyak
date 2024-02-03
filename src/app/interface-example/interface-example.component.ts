@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
+//CommonModule felelős az *NgIf és az *NgFor használatáért
 @Component({
   selector: 'app-interface-example',
   standalone: true,
@@ -95,5 +96,3 @@ export interface Employee {
   salary: number; //fizetés
   role: string; //beosztás
 }
-
-
